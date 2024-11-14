@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complement Logic</title>
+</head>
+<body>
+
+    <h1>Complement Logic</h1>
+    <p>Enter values for x and y:</p>
+    <label for="xValue">x: </label>
+    <input type="number" id="xValue" value="5">
+    <br>
+    <label for="yValue">y: </label>
+    <input type="number" id="yValue" value="3">
+    <br><br>
+    <button onclick="applyComplementLogic()">Apply Logic</button>
+
+    <p id="result"></p>
+    
+
+    <script>
+        function applyComplementLogic() {
+            // Get values of x and y from the input fields
+            let x = parseInt(document.getElementById("xValue").value);
+            let y = parseInt(document.getElementById("yValue").value);
+
+            let resultMessage = "";
+            
+            if (x > y) {
+                // If x > y, increment x by 1 and complement y
+                x = x + 1;
+                y = ~y; // complement of y
+                resultMessage = `x > y: Incremented x by 1 and complemented y. x = ${x}, y = ${y}`;
+            } else if (x === y) {
+                // If x == y, complement y
+                y = ~y;
+                resultMessage = `x == y: Complemented y. y = ${y}`;
+            } else {
+                // If y > x, complement x
+                x = ~x;
+                resultMessage = `y > x: Complemented x. x = ${x}`;
+            }
+
+            // Display the result
+            document.getElementById("result").innerText = resultMessage;
+        }
+    </script>
+
+</body>
+</html>
