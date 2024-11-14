@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <style>
+        body {
+            font-family: 'Bahnschrift SemiLight', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif, sans-serif;
+            background-color: rgb(26, 46, 48);
+            border: 1px hidden black;
+            margin: 50px;
+            padding: 50px;
+        }
+        form {
+            background: rgb(26, 46, 48);
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            margin: auto;
+        }
+        input[type="text"], input[type="number"], select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>SAIPEM CONTRACTING NIGERIA</h1>
+    <br>
+    <img src ="C:\Users\oghen\Desktop\report diagrams\saipem 1.png" alt="saipem logo" width="50" height="50">
+    <br>
+                     <h2>Registration Form</h2>
+<br>
+      <p> Please ensure that payment has been made to this account before registration for verification in the later stage of the inter view</p>
+    <p> Stanbic Ibtc 0048778296</P>
+        <P>Saipem contracting LTD</P>
+      <form action="#" method="POST">
+    <label for="first-name">First Name:</label>
+    <input type="text" id="first-name" name="first-name" required>
+
+    <label for="last-name">Last Name:</label>
+    <input type="text" id="last-name" name="last-name" required>
+
+    <label for="age">Age:</label>
+    <input type="number" id="age" name="age" min="1" required>
+
+    <label for="Email">Email </label>
+    <input type="text" id="Email" name="Email" required>
+    
+    <label for="gender">Gender:</label>
+    <select id="gender" name="gender" required>
+        <option value="">Select...</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="other">Other</option>
+    </select>
+    <label for="CV upload">CV Upload</label>
+    <br>
+    <input type="file" id="cv-upload" name="cv" accept="image/*" required name="gender"required>
+    <br>
+    <br>
+
+    <input type="submit" value="Register">
+    
+</form>
+
+</body>
+</html>

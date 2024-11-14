@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factorial of 52</title>
+</head>
+<body>
+
+    <h1>Factorial of 50</h1>
+    <button onclick="calculateFactorial()">Calculate 52!</button>
+    <p id="result"></p>
+
+    <script>
+        // Function to calculate factorial using a loop
+        function calculateFactorial() {
+            let n = 52; // The number we want to calculate the factorial for
+            let factorial = 1n; // Use BigInt to store large numbers
+
+            // Loop to calculate the factorial
+            for (let i = 2; i <= n; i++) {
+                factorial *= BigInt(i); // Multiply each number to get the factorial
+            }
+
+            // Display the result in the HTML page
+            document.getElementById("result").innerText = `The factorial of 52 is: ${factorial.toString()}`;
+        }
+    </script>
+
+</body>
+</html>
